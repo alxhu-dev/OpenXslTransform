@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenXslTransform", "OpenXslTransform\OpenXslTransform.csproj", "{F374D7E4-EB39-4FA2-A1AA-46448631C901}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F374D7E4-EB39-4FA2-A1AA-46448631C901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F374D7E4-EB39-4FA2-A1AA-46448631C901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F374D7E4-EB39-4FA2-A1AA-46448631C901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F374D7E4-EB39-4FA2-A1AA-46448631C901}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0AE7A755-CA9B-4B83-9B4B-ACC1359C713B}
+	EndGlobalSection
+EndGlobal
