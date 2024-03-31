@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenXslTransform", "OpenXsl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenXslTransform.UnitTest", "OpenXslTransform.UnitTest\OpenXslTransform.UnitTest.csproj", "{29277ADF-36DA-4F19-9B2D-F3C510407729}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenXslTransform.IntegrationTest", "OpenXslTransform.IntegrationTest\OpenXslTransform.IntegrationTest.csproj", "{433807D0-B63B-4D75-BC6A-31794E39331A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{29277ADF-36DA-4F19-9B2D-F3C510407729}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29277ADF-36DA-4F19-9B2D-F3C510407729}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29277ADF-36DA-4F19-9B2D-F3C510407729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{433807D0-B63B-4D75-BC6A-31794E39331A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{433807D0-B63B-4D75-BC6A-31794E39331A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{433807D0-B63B-4D75-BC6A-31794E39331A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{433807D0-B63B-4D75-BC6A-31794E39331A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
