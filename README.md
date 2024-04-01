@@ -3,6 +3,10 @@ This project aims to provide a .NET library for XSL transformations.
 
 At the current state, it's in an experimental alpha phase. Using it in production is highly discouraged.
 
+Licensed under MIT license.
+
+This library follows [Semantic Versioning (SemVer)](https://semver.org/).
+
 ## Supported .NET versions
 All officially supported .NET versions will be supported by OpenXslTransform. That means:
 
