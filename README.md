@@ -22,4 +22,4 @@ All officially supported .NET versions will be supported by OpenXslTransform. Th
 | .NET 7       | 2024-05-14          |
 | .NET 8       | 2026-11-10          |
 
-Additionally, an .NET Standard 2.0-package is provided to ensure compatibility to many versions.
+Additionally, a .NET Standard 2.0-package is provided to ensure compatibility to many versions.
