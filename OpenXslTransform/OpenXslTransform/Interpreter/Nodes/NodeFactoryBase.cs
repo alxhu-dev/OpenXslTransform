@@ -14,6 +14,13 @@ namespace OpenXslTransform.Interpreter.Nodes
             _prefix = prefix;
         }
 
+        protected string GetFullNodeName(string name)
+        {
+            if (!string.IsNullOrEmpty(_prefix))
+                return $"{_prefix}:{name}";
+
+            return name;
+        }
 
         public INode ParseNode(XmlReader xmlReader)
         {

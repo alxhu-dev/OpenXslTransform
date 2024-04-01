@@ -27,7 +27,6 @@ namespace OpenXslTransform.Interpreter.Nodes
                     OnParseAttribute(xmlReader.Name, xmlReader.Value);
                 }
             }
-
             while (xmlReader.Read())
             {
                 switch (xmlReader.NodeType)
@@ -50,6 +49,5 @@ namespace OpenXslTransform.Interpreter.Nodes
         protected virtual void OnParseValue(string value)
         {
         }
-
     }
 }

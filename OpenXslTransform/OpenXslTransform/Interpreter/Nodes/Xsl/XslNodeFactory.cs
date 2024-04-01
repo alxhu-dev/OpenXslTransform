@@ -24,7 +24,9 @@ namespace OpenXslTransform.Interpreter.Nodes.Xsl
             switch (name)
             {
                 case "stylesheet": return new XslStylesheetNode();
-                default: throw new NotImplementedException($"Unknown node name: {name}");
+                case "template": return new XslTemplateNode();
+                default:
+                    throw new NotImplementedException($"Unknown node name: {GetFullNodeName(name)}");
             }
         }
     }

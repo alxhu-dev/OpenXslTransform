@@ -11,35 +11,33 @@ namespace OpenXslTransform.UnitTest.Interpreter.Nodes.Xsl
 {
     internal class XslStylesheetNodeTest
     {
-
-
-
-
-
         [Test]
         public void SimpleStylesheetNode()
         {
             string xml = @"<xsl:stylesheet version=""1.0"" xmlns:xsl=""http://www.w3.org/1999/XSL/Transform""></xsl:stylesheet>";
-            using Stream stream = StreamHelper.AsStream(xml);
-            using XmlReader xmlReader = XmlReader.Create(stream);
-            while (xmlReader.Read())
-            {
-                switch (xmlReader.NodeType)
-                {
-                    case XmlNodeType.Element:
-                        Assert.That(xmlReader.Name, Is.EqualTo("xsl:stylesheet"));
+            using XmlReaderHelper helper = new XmlReaderHelper(xml);
+            helper.ReadToNextElement();
+            Assert.That(helper.XmlReader.Name, Is.EqualTo("xsl:stylesheet"));
 
-                        XslStylesheetNode xslStylesheetNode = new XslStylesheetNode();
-                        xslStylesheetNode.Parse(xmlReader);
+            XslStylesheetNode xslStylesheetNode = new XslStylesheetNode();
+            xslStylesheetNode.Parse(helper.XmlReader);
 
-                        Assert.That(xslStylesheetNode.Version, Is.EqualTo("1.0"));
+            Assert.That(xslStylesheetNode.Version, Is.EqualTo("1.0"));
+        }
 
-                        return;
-                }
-            }
+        [Test]
+        public void StylesheetNodeWithContent()
+        {
+            string xml = @"<xsl:stylesheet version=""1.0"" xmlns:xsl=""http://www.w3.org/1999/XSL/Transform""><xsl:template match=""/""></xsl:template></xsl:stylesheet>";
+            using XmlReaderHelper helper = new XmlReaderHelper(xml);
+            helper.ReadToNextElement();
+            Assert.That(helper.XmlReader.Name, Is.EqualTo("xsl:stylesheet"));
 
+            XslStylesheetNode xslStylesheetNode = new XslStylesheetNode();
+            xslStylesheetNode.Parse(helper.XmlReader);
 
-        } 
+            Assert.That(xslStylesheetNode.Version, Is.EqualTo("1.0"));
+        }
 
     }
 }
