@@ -6,7 +6,7 @@ using System.Text;
 
 namespace OpenXslTransform.Interpreter
 {
-    public static class NodeFactories
+    internal static class NodeFactories
     {
         public static INodeFactory GetByNamespace(string ns)
         { 

@@ -6,6 +6,12 @@
     <Title>OpenXslTransform</Title>
 	<VersionPrefix>0.1.0</VersionPrefix>
 	<Version>$(VersionPrefix)-alpha.1</Version>
+	<IncludeSymbols>False</IncludeSymbols>
   </PropertyGroup>
-
+	
+	<ItemGroup>
+		<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+			<_Parameter1>OpenXslTransform.UnitTest</_Parameter1>
+		</AssemblyAttribute>
+	</ItemGroup>
 </Project>

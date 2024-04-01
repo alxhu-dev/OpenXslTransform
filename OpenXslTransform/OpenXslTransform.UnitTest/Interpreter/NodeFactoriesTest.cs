@@ -26,7 +26,7 @@ namespace OpenXslTransform.UnitTest.Interpreter
         [Test]
         public void TestGetByNamespaceNotImplemented()
         {
-            Assert.Throws<NotImplementedException>(() => { NodeFactories.GetByNamespace("NotImplementedNamespace"); });
+            Assert.Throws<NotImplementedException>(() => NodeFactories.GetByNamespace("NotImplementedNamespace"));
         }
     }
 }

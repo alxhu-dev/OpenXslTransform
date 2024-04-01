@@ -5,11 +5,18 @@ using System.Xml;
 
 namespace OpenXslTransform.Interpreter.Nodes.Xsl
 {
-    public class XslStylesheetNode : INode
+    internal class XslStylesheetNode : NodeBase
     {
-        public void Parse(XmlReader xmlReader)
+        public string Version { get; set; }
+
+        protected override void OnParseAttribute(string name, string value)
         {
-            throw new NotImplementedException();
+            switch (name)
+            {
+                case "version":
+                    Version = value;
+                    break;
+            }
         }
     }
 }

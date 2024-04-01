@@ -5,17 +5,21 @@ using System.Xml;
 
 namespace OpenXslTransform.Interpreter.Nodes.Xsl
 {
-    public class XslNodeFactory : NodeFactoryBase
+    internal class XslNodeFactory : NodeFactoryBase
     {
         public static readonly XslNodeFactory Instance = new XslNodeFactory();
+
+        public XslNodeFactory() : base("xsl")
+        {
+        }
 
         public override INode GetNodeByName(string name)
         {
             if (name == null)
                 throw new ArgumentNullException("name");
 
-            if (name.Length == 0)
-                throw new ArgumentException("'name' must not be empty.", "name");
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentException("'name' must not be empty or whitespace only.", "name");
 
             switch (name)
             {

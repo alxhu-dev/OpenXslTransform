@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace OpenXslTransform.Interpreter.Nodes
 {
-    public interface INodeFactory
+    internal interface INodeFactory
     {
         INode ParseNode(XmlReader xmlReader);
     }

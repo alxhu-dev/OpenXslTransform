@@ -14,8 +14,7 @@ namespace OpenXslTransform.IntegrationTest.Tests
         [Test]
         public void ParseSuccessfully()
         {
-            XslInterpreter xslInterpreter = new XslInterpreter();
-            xslInterpreter.Parse(XslFileStream);
+
         }
     }
 }

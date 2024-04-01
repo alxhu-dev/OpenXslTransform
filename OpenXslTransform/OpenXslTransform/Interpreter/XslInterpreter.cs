@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OpenXslTransform.Interpreter.Nodes;
+using OpenXslTransform.Interpreter.Nodes.Xsl;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -6,8 +8,9 @@ using System.Xml;
 
 namespace OpenXslTransform.Interpreter
 {
-    public class XslInterpreter
+    internal class XslInterpreter
     {
+        public INode RootNode { get; private set; }
 
         public XslInterpreter()
         {
@@ -22,13 +25,12 @@ namespace OpenXslTransform.Interpreter
                     switch (xmlReader.NodeType)
                     {
                         case XmlNodeType.Element:
-                            throw new NotImplementedException();
+                            RootNode = XslNodeFactory.Instance.ParseNode(xmlReader);
+                            break;
 
                     }
                 }
             }
         }
-
-
     }
 }
