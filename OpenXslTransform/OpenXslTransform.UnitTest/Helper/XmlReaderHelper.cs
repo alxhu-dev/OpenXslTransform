@@ -14,6 +14,12 @@ namespace OpenXslTransform.UnitTest.Helper
 
         public XmlReaderHelper(string s)
         {
+            if (!s.Contains("xmlns:xsl="))
+            {
+                int firstTagClosePosition = s.IndexOf('>');
+                s = $"{s.Substring(0, firstTagClosePosition)} xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\">{s.Substring(firstTagClosePosition + 1)}";
+            }
+
             _stream = StreamHelper.AsStream(s);
             XmlReader = XmlReader.Create(_stream);
         }
