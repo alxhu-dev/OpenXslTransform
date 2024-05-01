@@ -14,4 +14,8 @@
 			<_Parameter1>OpenXslTransform.UnitTest</_Parameter1>
 		</AssemblyAttribute>
 	</ItemGroup>
+	
+	<ItemGroup>
+	  <Folder Include="Processor\" />
+	</ItemGroup>
 </Project>

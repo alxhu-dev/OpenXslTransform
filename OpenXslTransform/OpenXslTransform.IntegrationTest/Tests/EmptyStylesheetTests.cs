@@ -14,7 +14,8 @@ namespace OpenXslTransform.IntegrationTest.Tests
         [Test]
         public void ParseSuccessfully()
         {
-
+            XslTransform xslTransform = new XslTransform();
+            xslTransform.Load(XslFileStream);
         }
     }
 }
